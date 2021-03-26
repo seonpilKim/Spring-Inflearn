@@ -28,7 +28,7 @@
     - [Groovy](https://docs.groovy-lang.org/docs/next/html/documentation/template-engines.html#_the_markuptemplateengine)
     - [Thymeleaf](https://www.thymeleaf.org/)
     - [Mustache](https://mustache.github.io/)
-- `JSPs에는 several [known limitations](https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-jsp-limitations)이 존재하기 때문에, JSPs 사용은 피하는 것이 좋다.
+- `JSPs`에는 several [known limitations](https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-jsp-limitations)이 존재하기 때문에, JSPs 사용은 피하는 것이 좋다.
 ### Tutorial
 - http://localhost:8080/hello 에서 HTTP GET requests를 수용하는 static home page를 만드는 과정을 소개한다.
 - requests를 받으면, HTML을 display하는 web page를 respond 한다.
@@ -127,7 +127,7 @@
     </html>
     ```
 #### Run the Application
-- `@SpringBootApplication`은 아래의 annotations들을 추가해주는 편리한 annotation이다.
+- `@SpringBootApplication`은 아래의 annotations들을 추가해 주는 편리한 annotation이다.
     - `@Configuration` : 해당 class에서 `Java Beans`을 등록하고 있음을 명시하는 annotation
     - `@EnableAutoConfiguration` : Spring Boot에게 classpath 설정, 다른 beans, 다양한 속성 설정을 기반으로 `Java Beans`를 추가하라고 지시하는 annotation
     - `@ComponentScan` : Spring에게 해당 패키지에서 `@Component` annotation을 가진 Beans를 스캔하여 등록하라고 지시하는 annotation
