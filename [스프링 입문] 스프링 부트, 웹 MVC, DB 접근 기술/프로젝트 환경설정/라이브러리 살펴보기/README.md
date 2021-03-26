@@ -7,7 +7,7 @@
 - `spring-webmvc` : 스프링 웹 MVC
     - `Spring web MVC란?`
         - Spring Framework에서 제공하는 `web module`이다.
-        - MVC는 `Model-View-Controller`의 약자로, 기본 시스템 모듈을 MVC로나누어 구현한다.
+        - MVC는 `Model-View-Controller`의 약자로, 기본 시스템 모듈을 MVC로 나누어 구현한다.
             - `Model` : 데이터 디자인을 담당
                 > ex) 상품 목록, 주문 내역 등
             - `View` : 실제로 렌더링되어 보이는 페이지를 담당
