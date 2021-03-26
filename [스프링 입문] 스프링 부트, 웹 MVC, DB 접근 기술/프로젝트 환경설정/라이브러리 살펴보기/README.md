@@ -7,19 +7,19 @@
 - `spring-webmvc` : 스프링 웹 MVC
     - `Spring web MVC란?`
         - Spring Framework에서 제공하는 `web module`이다.
-        - MVC는 `Model-View-Controller`의 약자로, 기본 시스템 모듈을 MVC로나누어   구현한다.
+        - MVC는 `Model-View-Controller`의 약자로, 기본 시스템 모듈을 MVC로나누어 구현한다.
             - `Model` : 데이터 디자인을 담당
                 > ex) 상품 목록, 주문 내역 등
             - `View` : 실제로 렌더링되어 보이는 페이지를 담당
-                - `렌더링(rendering)` : server로 부터 HTML 파일을 받아 webbrowser에    전달하는 과정
+                - `렌더링(rendering)` : server로 부터 HTML 파일을 받아 web browser에 전달하는 과정
                 > ex) `.JSP` 파일들이 여기에 해당
-            - `Controller` : 사용자의 request를 받고 response를 주는 logic을담당
+            - `Controller` : 사용자의 request를 받고 response를 주는 logic을 담당
             > ex) `Get`, `Post` 등의 uri mapping이 여기에 해당
 ### spring-boot-starter-thymeleaf(View)
-- Web 및 독립형 환경을 위한 modern sever-side Java templateengine이다.
-- HTML은 web browser 출력하는 것 뿐만 아니라, static prototype의역할도 가능하다.
+- Web 및 독립형 환경을 위한 modern sever-side Java template engine이다.
+- HTML은 web browser 출력하는 것 뿐만 아니라, static prototype의 역할도 가능하다.
 - 주요 목표
-    - Development workflow에 우아하고 `자연스러운 template`을 가져오는것
+    - Development workflow에 우아하고 `자연스러운 template`을 가져오는 것
          ```html
         <table>
             <thead>
