@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<!--
+ xml의 schema로 template engine인 thymeleaf가 선언이 되어있다.
+ -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<!--
+HelloController.class 에서 model.addAttribute("data", "hello!"); 을 보자.
+"data"라는 attribute의 value를 "hello!" 라고 지정하였으므로
+여기서 ${data}는 "hello!"으로 치환이 된다.
+-->
+<p th:text="'안녕하세요. ' + ${name}">안녕하세요. 손님</p>
+</body>
+</html>
+
