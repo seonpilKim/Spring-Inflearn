@@ -25,7 +25,7 @@
     </html>
     ```
     - 실행 : http://localhost:8080/hello-static.html
-- 정적 컨텐츠 이미지
+- 정적 컨텐츠 이미지<br>
 ![](imgs/1.PNG)
 
 ## MVC와 템플릿 엔진
