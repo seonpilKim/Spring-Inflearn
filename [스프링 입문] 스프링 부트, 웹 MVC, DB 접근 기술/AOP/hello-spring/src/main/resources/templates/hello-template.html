@@ -1,0 +1,10 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<!--
+    Server에 접속하면 p 태그 안의 내용이 th:text 내용으로 변경되어 나타난다.
+    p 태크 안의 내용은 Server없이 돌렸을 때 나타난다.
+-->
+<p th:text="'hello ' + ${name}">hello! empty</p>
+</body>
+</html>
