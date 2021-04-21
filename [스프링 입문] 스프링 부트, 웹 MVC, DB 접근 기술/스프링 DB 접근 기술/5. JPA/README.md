@@ -8,7 +8,7 @@
     6. 스프링 데이터 JPA
 
 ## JPA
-- `JPA`는 기존의 반복 코드는 물론이고, 기본적인 SQL도 JAP가 직접 만들어서 실행해준다.
+- `JPA`는 기존의 반복 코드는 물론이고, 기본적인 SQL도 JPA가 직접 만들어서 실행해준다.
 - `JPA`를 사용하면, SQL과 데이터 중심의 설계에서 `객체 중심의 설계`로 패러다임 전환이 가능하다.
 - `JPA`를 사용하면 개발 생산성을 크게 높일 수 있다.
 
@@ -21,7 +21,7 @@ dependencies {
 	...
 }
 ```
-- `spring-boot-starter-data-jap`는 내부에 jdbc 관련 라이브러리를 포함하므로, jdbc는 제거해도 된다.
+- `spring-boot-starter-data-jpa`는 내부에 jdbc 관련 라이브러리를 포함하므로, jdbc는 제거해도 된다.
 
 - **스프링 부트에 JPA 설정 추가**
 ```properties
