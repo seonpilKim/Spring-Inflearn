@@ -155,20 +155,24 @@ public interface MemberRepository {
 ```java
 package hello.core.member;
 
-public class MemberServiceImpl implements MemberService{
+import java.util.HashMap;
+import java.util.Map;
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+public class MemoryMemberRepository implements MemberRepository {
+
+    private static Map<Long, Member> store = new HashMap<>();
 
     @Override
-    public void join(Member member) {
-        memberRepository.save(member);
+    public void save(Member member) {
+        store.put(member.getId(), member);
     }
 
     @Override
-    public Member findMember(Long memberId) {
-        return memberRepository.findById(memberId);
+    public Member findById(Long memberId) {
+        return store.get(memberId);
     }
 }
+
 ```
 - 데이터베이스가 아직 확정이 안되었지만, 개발은 진행해야 하므로 가장 단순한 메모리 회원 저장소를 구현하여 개발을 진행한다.
 - 참고로 `HashMap`은 동시성 이슈가 발생할 수 있으므로, 실무에서는 `ConcurrentHashMap`을 사용하자.
