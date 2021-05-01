@@ -324,8 +324,8 @@ public class FixDiscountPolicy implements DiscountPolicy {
     }
 }
 ```
-### 주문 도메인
 - VIP만 1,000원 할인
+### 주문 도메인
 #### 주문 엔티티
 ```java
 package hello.core.order;
