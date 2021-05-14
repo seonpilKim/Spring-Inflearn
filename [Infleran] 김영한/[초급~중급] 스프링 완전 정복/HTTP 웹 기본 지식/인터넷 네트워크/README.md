@@ -53,7 +53,7 @@ ___
 - 신뢰할 수 있는 프로토콜
 - 현재는 대부분 TCP를 사용한다.
 ### UDP 특징
-- **사용자 데이터그램 프로토콜(Yser Datagram Protocol)<br><br>
+- **사용자 데이터그램 프로토콜(User Datagram Protocol)**<br><br>
 - 하얀 도화지에 비유(기능이 거의 없음)
 - 연결 지향 - TCP 3 way handshake X
 - 데이터 전달 보증 X
