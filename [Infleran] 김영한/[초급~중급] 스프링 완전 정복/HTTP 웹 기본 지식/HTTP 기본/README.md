@@ -26,7 +26,7 @@ ___
 - <b>TCP:</b> HTTP/1.1, HTTP/2
 - <b>UDP:</b> HTTP/3
 - 현재 HTTP/1.1 주로 사용
-    > HTTP/2, HTTP3 도 점점 사용빈도 증가
+    > HTTP/2, HTTP/3 도 점점 사용빈도 증가
 ### HTTP 특징
 - 클라이언트-서버 구조
 - 무상태 프로토콜(stateless), 비연결성
