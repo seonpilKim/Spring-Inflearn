@@ -143,8 +143,19 @@ ___
     - 그렇지 않으면, 조인 테이블 방식을 사용한다.(중간에 테이블을 하나 추가)
 - <b>단점</b>
     - 엔티티가 관리하는 외래 키가 다른 테이블에 있음
-    - 연관관계 관리를 위해 추가로 UPDATE SQL 실행
+    - 연관관계 관리를 위해 `추가적인 UPDATE SQL 실행`
+        > ex) Member 테이블에 회원 정보 INSERT -> 방금 삽입한 회원의 TEAM_ID 외래 키 UPDATE
 - 일대다 단방향 매핑보다는 `다대일 양방향 매핑`을 사용하자.
+    - `다(N)` 쪽에서 `외래 키를 관리`하되, 어색하지 않게 `일(1)` 쪽에 `연관관계 편의 메소드`를 추가하여 사용하자.
+        ```java
+        // 팀에서 회원을 추가하는 것이 자연스러운 경우
+        // Team.class
+        public void addMember(Member member){
+            members.add(member);
+            member.setTeam(this);
+        }
+        ```
+    - `객체지향적인 부분의 손해(다대일 양방향)`와 `추가적인 UPDATE 쿼리 발생(일대다 단방향)`의 Tradeoff 이므로, 적절하게 판단하여 사용하자.
 ```java
 @Entity
 public class Member {
