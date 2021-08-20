@@ -298,6 +298,19 @@ public class Order {
     }
 }
 ```
+- <b>기능 설명</b>
+    - <b>생성 메소드(`createOrder()`)</b>
+        - 주문 엔티티를 생성할 때 사용
+        - 주문 회원, 배송정보, 주문상품의 정보를 받아 실제 주문 엔티티 생성
+    - <b>주문 취소(`cancel()`)</b>
+        - 주문 취소 시 사용
+        - 주문 상태를 취소로 변경하고, 주문상품에 주문취소를 알린다.
+        - 만약, 이미 배송을 완료한 상품이면 주문을 취소하지 못하도록 예외를 발생시킨다.
+    - <b>전체 주문 가격 조회(`getTotalPrice()`)</b>
+        - 주문 시 사용한 전체 주문 가격을 조회한다.
+        - 전체 주문 가격을 알려면, 각각의 주문상품 가격을 알아야 한다.
+        - 로직을 보면, 연관된 주문상품들의 가격을 조회해서 더한 값을 반환한다.
+            > 실무에서는 주로 주문에 전체 주문 가격 필드를 두고 역정규화 한다.
 ### 주문 상태
 ```java
 public enum OrderStatus {
@@ -368,6 +381,14 @@ public class OrderItem {
     }
 }
 ```
+- <b>기능 설명</b>
+    - <b>생성 메소드(`createOrderItem()`)</b>
+        - 주문 상품, 가격, 수량 정보를 사용해서 주문상품 엔티티 생성
+        - `item.removeStock(count)`를 호출해서 주문한 수량만큼 상품의 재고 감소
+    - <b>주문 취소(`cancel()`)</b>
+        - `getItem().addStock(count)`를 호출해서 취소한 주문 수량만큼 상품의 재고 증가
+    - <b>주문 가격 조회(`getTotalPrice()`)</b>
+        - 주문 가격에 수량을 곱한 값을 반환
 ### 상품 엔티티
 ```java
 @Entity
@@ -421,6 +442,37 @@ public abstract class Item {
         this.name = name;
         this.price = price;
         this.stockQuantity = stockQuantity;
+    }
+}
+```
+- <b>비즈니스 로직 분석</b>
+    - `addStock()`
+        - 파라미터로 넘어온 수만큼 재고를 증가시킨다.
+        - 재고가 증가하거나, 상품 주문을 취소해서 재고를 다시 늘려야할 때 사용
+    - `removeStock()`
+        - 파라미터로 넘어온 수만큼 재고를 감소시킨다.
+        - 재고가 부족하면 예외가 발생하며, 주로 상품을 주문할 때 사용
+### 예외 추가
+```java
+public class NotEnoughStockException extends RuntimeException {
+    public NotEnoughStockException() {
+        super();
+    }
+
+    public NotEnoughStockException(String message) {
+        super(message);
+    }
+
+    public NotEnoughStockException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public NotEnoughStockException(Throwable cause) {
+        super(cause);
+    }
+
+    protected NotEnoughStockException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
     }
 }
 ```
