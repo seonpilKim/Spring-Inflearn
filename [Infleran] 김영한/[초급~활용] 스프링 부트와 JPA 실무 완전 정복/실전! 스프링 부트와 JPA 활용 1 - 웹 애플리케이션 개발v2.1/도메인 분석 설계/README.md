@@ -5,6 +5,7 @@
 - 도메인 모델과 테이블 설계
 - 엔티티 클래스 개발
 - 엔티티 설계 시 주의점
+- 애플리케이션 구현 준비
 ___
 ## 프로젝트 환경설정
 - <b>build.gradle</b>
@@ -614,3 +615,28 @@ ___
         spring.jpa.hibernate.naming.physical-strategy: 
         org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
         ```
+___
+## 애플리케이션 구현 준비
+### 구현 요구사항
+- <b>예제를 단순화하기 위해 다음 기능은 구현❌</b>
+    - 로그인과 권한 관리❌
+    - 파라미터 검증과 예외 처리❌
+    - 상품은 도서만 사용
+    - 카테고리 사용❌
+    - 배송정보는 사용❌
+### 애플리케이션 아키텍처
+![](imgs/1.PNG)
+- <b>계층형 구조 사용</b>
+    - controller, web: 웹 계층
+    - service: 비즈니스 로직, 트랜잭션 처리
+    - repository: JPA를 직접 사용하는 계층, 엔티티 매니저 사용
+    - domain: 엔티티가 모여 있는 계층, 모든 계층에서 사용
+- <b>패키지 구조</b>
+    - jpabook.jpashop
+        - domain
+        - exception
+        - repository
+        - service
+        - web
+- <b>개발 순서</b>
+    - 도메인 -> 서비스, 리포지토리 -> 테스트 검증 -> 웹 계층
