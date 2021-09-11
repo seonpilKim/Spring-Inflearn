@@ -142,7 +142,7 @@ ___
 
 - 권한 주기: `chmod 755 h2.sh`
 - 데이터베이스 파일 생성 방법
-    - `jdbc:h2:~/queryds` (최소 한 번)
+    - `jdbc:h2:~/querydsl` (최소 한 번)
     - `~/querydsl.mv.db` 파일 생성 확인
     - 이후로는 `jdbc:h2:tcp://localhost/~/querydsl` 으로 접속
 > <b>참고</b>
