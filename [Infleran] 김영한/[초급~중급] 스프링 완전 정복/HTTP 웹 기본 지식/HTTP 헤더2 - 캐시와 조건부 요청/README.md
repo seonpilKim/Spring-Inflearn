@@ -43,7 +43,7 @@ lkj123kljoiasudlkjaweioluywlnfdo912u34ljko98udjklaslkjdfl;qkawj9;o4ruawsldkal;sk
 - 캐시 덕분에 캐시 가능 시간동안 네트워크를 사용하지 않아도 된다.
 - 비싼 네트워크 사용량을 줄일 수 있다.
 - 브라우저 로딩 속도가 매우 빠르다<br><br>
-- <b>세 번째 요청 - 캐시 시간 초과</b>
+- <b>세 번째 요청 - 캐시 시간 초과</b><br>
 ![](imgs/8.PNG)<br>
 ![](imgs/9.PNG)<br>
 ![](imgs/10.PNG)<br><Br>
@@ -71,7 +71,7 @@ lkj123kljoiasudlkjaweioluywlnfdo912u34ljko98udjklaslkjdfl;qkawj9;o4ruawsldkal;sk
 ```
 ![](imgs/1.PNG)<br>
 ![](imgs/2.PNG)<br><br>
-- <b>두 번째 요청 - 캐시 시간 초과</b>
+- <b>두 번째 요청 - 캐시 시간 초과</b><br>
 ![](imgs/3.PNG)<br>
 ![](imgs/4.PNG)<br>
 ![](imgs/5.PNG)<br>
