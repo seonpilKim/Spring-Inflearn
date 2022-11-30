@@ -246,6 +246,7 @@ ___
 - 캐시가능(Cacheable Methods)
 > 참고<br>
 > ![https://ko.wikipedia.org/wiki/HTTP](imgs/13.PNG)
+> - Get 요청에 body는 존재하지만, 좋은 방법이 아니다. ![참고](https://stackoverflow.com/questions/978061/http-get-with-request-body)
 ### 안전(Safe)
 - 호출해도 리소스를 변경하지 않는다.
     > Q: 그래도 계속 호출해서, 로그 같은게 쌓여 장애가 발생하면?
